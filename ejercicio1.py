@@ -15,10 +15,10 @@ def ordenar_burbuja(x:list)->list:
 
 if __name__=="__main__":
     candidatos=np.arange(1,31,1)
-    print(candidatos)
+    # print(candidatos)
     votos=np.random.randint(1,500,size=30)
-    print(type(votos),votos)
-    print(np.sum(votos))
-    eleccion={candidatos:votos}
+    # print(type(votos),votos)
+    # print(np.sum(votos))
+    eleccion={candidato : votos[i] for i,candidato in enumerate(candidatos)}
     print(eleccion)
     
