@@ -1,11 +1,9 @@
-'''1. En la universidad se efectuó la elección del representante de los estudiantes 
- ante el Consejo Superior. Se presentaron 30 candidatos y cada uno se identificó 
- con un número del 1 al 30. Asumiendo que los 5000 estudiantes de la universidad votaron, 
- elabore un programa donde: Imprima un listado de mayor a menor, según el número de votos obtenidos 
- por cada candidato'''
- 
 import numpy as np
 
+def show(A:dict)->None:
+    print('candidato  |  # votos ')
+    for e1,e2 in A.items():
+        print(f'     {e1}     |       {e2}')
 
 if __name__=="__main__":
     candidatos=np.arange(1,31,1)
@@ -21,14 +19,20 @@ if __name__=="__main__":
     resultado={candidato : votos[i] for i,candidato in enumerate(candidatos)} ##resultados de la elección
     eleccion={} ##Resultados ordenados y finales de la elección
     votos_ordenados=list(resultado.values())
-    votos_ordenados.sort()
-    print(votos_ordenados)
+    votos_ordenados.sort(reverse=True)
+    ##ordenar votación y ganador
     for voto in votos_ordenados:
-        for candidado in resultado:
+        for candidato in candidatos:
             if resultado.get(candidato)==voto:
-                pass
-                # print(voto)
-    # print(resultado)
-    # print(eleccion)
+                eleccion[candidato]=voto
+    ##
+    print('Elecciones Consejo Superior \n')
+    print(f'el ganador de las elecciones al consejo superior es el candidato{(list(eleccion.keys()))[0]} con un total'
+          f' de {eleccion[(list(eleccion.keys()))[0]]} votos')
+    print('A continuacíon los resultados completos : ')
+    show(eleccion)
+    
+    
+    
             
     
