@@ -27,7 +27,7 @@ if __name__=="__main__":
                 eleccion[candidato]=voto
     ##
     print('Elecciones Consejo Superior \n')
-    print(f'el ganador de las elecciones al consejo superior es el candidato{(list(eleccion.keys()))[0]} con un total'
+    print(f'el ganador de las elecciones al consejo superior es el candidato {(list(eleccion.keys()))[0]} con un total'
           f' de {eleccion[(list(eleccion.keys()))[0]]} votos')
     print('A continuacíon los resultados completos : ')
     show(eleccion)
