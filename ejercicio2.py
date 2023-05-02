@@ -7,6 +7,7 @@ nombres=np.empty(6500, dtype='U50')  ##el argumento 'U50' U de unicode y 50 el t
 for k in range(0,6500):
     nombres[k]=fk.name()
 promedios=np.round(np.random.uniform(0.0,5.0,size=6500))
+estudiantes=np.array(list(zip(codigos,nombres,promedios))) ##La función zip retorna un nuevo iterable cuyos elementos son tuplas que contienen un elemento de cada uno de los iteradores  
 
 
 
