@@ -67,4 +67,5 @@ if __name__=='__main__':
     else:
         for ind2 in inq:
             print(estudiantes[0][ind],'|',estudiantes[1][ind],'|',estudiantes[2][ind],'|',estudiantes[3][ind],'|',estudiantes[4][ind])
-    
+
+    print('jonk keyler sanchez pabob-2221551')
